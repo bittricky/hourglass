@@ -1,0 +1,17 @@
+{% comment %}
+The Hourglass's Chamber
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hour the Desert Holds | The Quiet Drift</title>
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  </head>
+  <body class="domain">
+    {% section 'hourglass' %}
+  </body>
+</html>

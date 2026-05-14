@@ -1,0 +1,37 @@
+{
+  "name": "hourglass",
+  "version": "1.0.0",
+  "author": "Mitul Patel",
+  "description": "A css hourglass animation rooted in desert stillness, grains drifting down like dunes in a slow collapse",
+  "type": "module",
+  "scripts": {
+    "build:html": "node scripts/build.js",
+    "build": "npm run build:html && npm run css",
+    "clean": "rm -rf dist",
+    "watch": "nodemon --watch templates --watch sections --watch scripts/build.js --ext liquid,js --exec \"npm run build:html\"",
+    "watch:css": "postcss style.css -o dist/style.css --watch",
+    "serve": "browser-sync start --server dist --port 3000 --no-open --files 'dist/**/*'",
+    "dev": "npm run build && concurrently -n watch,watch:css,serve -c cyan,green,magenta \"npm:watch\" \"npm:watch:css\" \"npm:serve\"",
+    "css": "postcss style.css -o dist/style.css"
+  },
+  "dependencies": {
+    "liquidjs": "^10.9.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "postcss-preset-env": "^10.0.5"
+  },
+  "browserslist": [
+    ">0.5%",
+    "last 2 versions",
+    "not dead",
+    "not op_mini all"
+  ],
+  "keywords": [],
+  "license": "ISC"
+}

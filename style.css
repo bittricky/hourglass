@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+  background-color: var(--bg);
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  letter-spacing: 3px;
+  word-spacing: -3px;
+  font-family: "Handlee", cursive;
+  word-break: break-all;
+  text-transform: lowercase;
+  text-align: justify;
+}
+
+div {
+  height: 600px;
+  width: 370px;
+  min-height: 600px;
+  min-width: 370px;
+  position: relative;
+}
+
+img,
+svg {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dusk {
+  float: left;
+  height: 600px;
+  width: 185px;
+  shape-outside: polygon(
+    28.02% 20.16%,
+    31.19% 24.27%,
+    38.11% 28.45%,
+    44.41% 31.04%,
+    52.05% 33.74%,
+    62.2% 36.7%,
+    73.68% 40.41%,
+    85.7% 43.87%,
+    93.86% 46.76%,
+    95.93% 49.82%,
+    92.99% 52.68%,
+    84.97% 55.68%,
+    74.71% 58.9%,
+    62.45% 62.08%,
+    51.06% 65.97%,
+    38.3% 70.39%,
+    31.77% 74.35%,
+    28.05% 77.43%,
+    26.43% 81.78%,
+    29.57% 87.93%,
+    31.96% 89.53%,
+    74.63% 89.54%,
+    99.45% 89.64%,
+    99.42% 99.51%,
+    7px 98.41%,
+    2.41% 0.11%,
+    100.02% 0.23%,
+    98.8% 7.51%,
+    31.62% 9.11%,
+    28.98% 10.56%,
+    26.76% 15.66%
+  );
+}
+
+.dawn {
+  float: right;
+  height: 600px;
+  width: 185px;
+  shape-outside: polygon(
+    97.62% 3px,
+    97.75% 96.93%,
+    0.24% 97.87%,
+    0.18% 89.7%,
+    68.14% 89.59%,
+    72.36% 85.4%,
+    72.59% 80.65%,
+    70.95% 76.24%,
+    63.8% 71.09%,
+    49.46% 65.97%,
+    35.84% 60.6%,
+    20.99% 56.65%,
+    10.96% 53.59%,
+    6.38% 50.94%,
+    6.08% 47.98%,
+    13.27% 44.94%,
+    25.53% 41.13%,
+    37.15% 37.95%,
+    48.16% 34.24%,
+    56.34% 31.69%,
+    62.82% 28.26%,
+    69.66% 24.95%,
+    74.71% 19.31%,
+    73.51% 13.67%,
+    69.44% 9.61%,
+    -0.59% 9.3%,
+    -0.44% -0.02%
+  );
+}
+
+.dunes-of-sand {
+  padding-top: 82px;
+  animation: hourglass var(--anim-duration) ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  text-align: justify;
+  word-break: break-all;
+  line-height: 0;
+  font-size: 0;
+}
+
+.sand {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0;
+  background-color: #edd0aa;
+  border-radius: 0;
+}
+
+@keyframes hourglass {
+  /* remove filter to see without blur    */
+  15% {
+    filter: blur(1px);
+  }
+
+  100% {
+    padding-top: 390px;
+  }
+}
