@@ -444,7 +444,7 @@ function renderDrift(sandGfx, detailGfx, streamGfx, t) {
 // Mounts the Pixi app, wires up layers, and starts the drift animation.
 
 (async () => {
-  const chamber = document.getElementById("vessel");
+  const chamber = document.getElementById("dunes-of-sand");
   if (!chamber) return;
 
   const app = new PIXI.Application({

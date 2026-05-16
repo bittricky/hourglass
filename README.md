@@ -60,7 +60,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 │           └── hourglass.json     # Local default settings
 ├── style.css                      # Source CSS: background, font, vessel canvas styling
 ├── templates/
-│   └── page.chamber.liquid        # Page wrapper template
+│   └── page.desert.liquid        # Page wrapper template
 ├── postcss.config.cjs             # PostCSS configuration
 └── package.json
 ```
@@ -77,7 +77,7 @@ The `sections/hourglass.liquid` file also contains a `{% schema %}` block with t
 
 ## How It Works
 
-- **Vessel**: The hourglass shape is defined by cubic Bézier curves sampled into a lookup table (LUT) that gives the glass interior half-width at every y pixel.
+- **Dunes-of-Sand**: The hourglass shape is defined by cubic Bézier curves sampled into a lookup table (LUT) that gives the glass interior half-width at every y pixel.
 - **Glass layers**: Pixi.js draws a translucent glass body fill, edge shadow, specular highlights, and wooden caps on top and bottom.
 - **Sand mask**: A `PIXI.Graphics` mask clips all sand rendering to the glass interior, so sand never spills outside the vessel.
 - **Sand fill**: Each frame, the upper and lower sand bodies are drawn as polygons that conform to the LUT boundary. Highlights and depth shadows give the dunes dimension.

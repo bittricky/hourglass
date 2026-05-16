@@ -114,7 +114,7 @@ for (const file of jsToCopy) {
 
 // Render the main page template to dist/index.html
 const outFile = path.join(distDir, "index.html");
-const html = await engine.renderFile("page.chamber.liquid");
+const html = await engine.renderFile("page.desert.liquid");
 await fsp.writeFile(outFile, html, "utf8");
 
 console.log(`Built ${path.relative(rootDir, outFile)}`);
