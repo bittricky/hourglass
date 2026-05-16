@@ -1,10 +1,10 @@
 # The Hourglass
 
-A quiet hourglass animation rendered in [Pixi.js](https://pixijs.com/), where sand drifts through a glass vessel in a slow collapse. Built with [LiquidJS](https://liquidjs.com/) templating and a Vite-powered dev pipeline.
+A hourglass animation rendered in [Pixi.js](https://pixijs.com/), where sand falls in a slow collapse. Built with [LiquidJS](https://liquidjs.com/) templating and a Vite-powered dev pipeline.
 
 ## Overview
 
-The hourglass is drawn entirely on a Pixi.js canvas, with a glass vessel, wooden caps, and drifting sand. The canvas has a transparent background so the configurable CSS backdrop shows through. The Liquid template build system generates the static page and injects settings as CSS custom properties.
+The hourglass is drawn entirely on a Pixi.js canvas, with a glass container, wooden caps, and pouring sand. The canvas has a transparent background so the configurable CSS backdrop shows through. The Liquid template build system generates the static page and injects settings as CSS custom properties.
 
 ## Tech Stack
 
