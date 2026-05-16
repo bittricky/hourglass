@@ -1,6 +1,6 @@
 # The Hourglass
 
-A hourglass animation rendered in [Pixi.js](https://pixijs.com/), where sand falls in a slow collapse. Built with [LiquidJS](https://liquidjs.com/) templating and a Vite-powered dev pipeline.
+A hourglass animation rendered in [Pixi.js](https://pixijs.com/). Built with [LiquidJS](https://liquidjs.com/) templating and a Vite-powered dev pipeline.
 
 ## Overview
 
@@ -51,7 +51,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 .
 ├── dist/                          # Build output (ignored in git)
 ├── sections/
-│   └── hourglass.liquid           # Section template: vessel container + Pixi.js script tag
+│   └── hourglass.liquid           # Section template: container + Pixi.js script tag
 ├── scripts/
 │   ├── build.js                   # LiquidJS renderer + asset copier
 │   ├── sand.js                    # Pixi.js hourglass rendering module
