@@ -6,25 +6,21 @@
   "type": "module",
   "scripts": {
     "build:html": "node scripts/build.js",
-    "build": "npm run build:html && npm run css",
+    "build": "pnpm run build:html && vite build",
     "clean": "rm -rf dist",
-    "watch": "nodemon --watch templates --watch sections --watch scripts/build.js --ext liquid,js --exec \"npm run build:html\"",
-    "watch:css": "postcss style.css -o dist/style.css --watch",
-    "serve": "browser-sync start --server dist --port 3000 --no-open --files 'dist/**/*'",
-    "dev": "npm run build && concurrently -n watch,watch:css,serve -c cyan,green,magenta \"npm:watch\" \"npm:watch:css\" \"npm:serve\"",
-    "css": "postcss style.css -o dist/style.css"
+    "dev": "pnpm run build:html && vite",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "liquidjs": "^10.9.2"
+    "liquidjs": "^10.9.2",
+    "pixi.js": "^7.4.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.29.3",
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.1.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
-    "postcss-preset-env": "^10.0.5"
+    "postcss-preset-env": "^10.0.5",
+    "vite": "^8.0.13"
   },
   "browserslist": [
     ">0.5%",

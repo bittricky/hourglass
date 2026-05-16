@@ -27,10 +27,7 @@ try {
 } catch (e) {
   // Fallback defaults if data file not found
   sectionSettings = {
-    bg_color: "#6ca2ba",
-    text_color: "#ffc12f",
-    anim_duration: 10,
-    font_size: 9,
+    bg_color: "#f5f3ef",
   };
 }
 
@@ -66,6 +63,7 @@ engine.registerTag("schema", {
     return "";
   },
 });
+
 engine.registerTag("endschema", {
   render: async function () {
     return "";
@@ -103,9 +101,20 @@ engine.registerTag("section", {
   },
 });
 
+const scriptsDir = path.join(rootDir, "scripts");
+const jsToCopy = ["sand.js"];
+
+// Copy JavaScript files to dist
+for (const file of jsToCopy) {
+  const src = path.join(scriptsDir, file);
+  const dest = path.join(distDir, file);
+  await fsp.copyFile(src, dest);
+  console.log(`Copied ${file} to dist/`);
+}
+
 // Render the main page template to dist/index.html
 const outFile = path.join(distDir, "index.html");
-const html = await engine.renderFile("page.hourglass.liquid");
+const html = await engine.renderFile("page.chamber.liquid");
 await fsp.writeFile(outFile, html, "utf8");
 
 console.log(`Built ${path.relative(rootDir, outFile)}`);
