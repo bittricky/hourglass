@@ -1,5 +1,11 @@
 # The Hourglass
 
+> *Golden dunes stretch wide*
+> 
+> *Shadows braid through dusk*
+>
+> *Stars forget the dark*
+
 A quiet hourglass animation rendered in [Pixi.js](https://pixijs.com/), where sand drifts through a glass vessel in a slow collapse. Built with [LiquidJS](https://liquidjs.com/) templating and a Vite-powered dev pipeline.
 
 ## Overview
@@ -73,7 +79,7 @@ Section settings are defined in `scripts/data/sections/hourglass.json` and injec
 |---|---|---|
 | `bg_color` | Background color | `#f5f3ef` |
 
-The `sections/hourglass.liquid` file also contains a `{% schema %}` block with the same setting for Shopify compatibility.
+The `sections/hourglass.liquid` file also contains a `{% schema %}` block.
 
 ## How It Works
 

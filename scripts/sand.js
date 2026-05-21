@@ -71,7 +71,7 @@ function buildDuneLUT() {
     CURVE_UPPER_CP,
     AXIS - THROAT_WIDTH,
     EQUINOX,
-    4000,
+    5000,
   );
 
   // Lower chamber curve (waist → rim)
@@ -84,7 +84,7 @@ function buildDuneLUT() {
     CURVE_LOWER_CP,
     AXIS - RIM_RADIUS,
     HORIZON_BOT,
-    4000,
+    5000,
   );
 
   // Fill any gaps in the LUT via linear interpolation

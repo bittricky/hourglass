@@ -38,7 +38,6 @@ const engine = new Liquid({
   cache: false,
 });
 
-// Emulate Shopify-like filters
 engine.registerFilter("asset_url", (input) => {
   // In dist, assets are copied at the root.
   return input;
@@ -48,7 +47,6 @@ engine.registerFilter("stylesheet_tag", (href) => {
   return `<link rel="stylesheet" href="${href}">`;
 });
 
-// Ignore Shopify-only schema blocks: {% schema %} ... {% endschema %}
 engine.registerTag("schema", {
   parse: function (token, remainTokens) {
     const stream = this.liquid.parser
