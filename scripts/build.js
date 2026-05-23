@@ -47,17 +47,28 @@ engine.registerFilter("stylesheet_tag", (href) => {
   return `<link rel="stylesheet" href="${href}">`;
 });
 
+// engine.registerTag("schema", {
+//   parse: function (token, remainTokens) {
+//     const stream = this.liquid.parser
+//       .parseStream(remainTokens)
+//       .on("tag:endschema", () => stream.stop())
+//       .on("text", () => {})
+//       .on("tag", () => {})
+//       .on("end", () => {});
+//     stream.start();
+//   },
+//   render: async function () {
+//     return "";
+//   },
+// });
 engine.registerTag("schema", {
-  parse: function (token, remainTokens) {
-    const stream = this.liquid.parser
-      .parseStream(remainTokens)
-      .on("tag:endschema", () => stream.stop())
-      .on("text", () => {})
-      .on("tag", () => {})
-      .on("end", () => {});
-    stream.start();
+  parse(token, remainTokens) {
+    let tok;
+    while ((tok = remainTokens.shift())) {
+      if (tok.name === "endschema") break;
+    }
   },
-  render: async function () {
+  render() {
     return "";
   },
 });
