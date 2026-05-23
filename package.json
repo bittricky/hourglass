@@ -2,7 +2,7 @@
   "name": "hourglass",
   "version": "1.0.0",
   "author": "Mitul Patel",
-  "description": "A css hourglass animation rooted in desert stillness, grains drifting down like dunes in a slow collapse",
+  "description": "An hourglass animation",
   "type": "module",
   "scripts": {
     "build:html": "node scripts/build.js",
