@@ -66,7 +66,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 │           └── hourglass.json     # Local default settings
 ├── style.css                      # Source CSS: background, font, vessel canvas styling
 ├── templates/
-│   └── page.desert.liquid        # Page wrapper template
+│   └── desert.liquid              # Page wrapper template
 ├── postcss.config.cjs             # PostCSS configuration
 └── package.json
 ```
