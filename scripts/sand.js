@@ -411,7 +411,7 @@ function renderDrift(sandGfx, detailGfx, streamGfx, t) {
   // Falling stream (the grain cascade through the throat)
   if (isFlowing) {
     const cascadeStrength = Math.min(1, upperFill / 0.05);
-    const streamTop = EQUINOX - 4;
+    const streamTop = EQUINOX;
     const streamBot = Math.max(lowerSurface, streamTop + 10);
     const streamLen = streamBot - streamTop;
 
@@ -424,7 +424,7 @@ function renderDrift(sandGfx, detailGfx, streamGfx, t) {
     for (let i = 0; i <= steps; i++) {
       const f = i / steps;
       const y = streamTop + f * streamLen;
-      const halfW = f < 0.15 ? THROAT_WIDTH * (f / 0.15) : 1.5 + f * 3.5;
+      const halfW = THROAT_WIDTH + f * 4;
       leftEdge.push(AXIS - halfW, y);
       rightEdge.unshift(AXIS + halfW, y);
     }
