@@ -1,8 +1,8 @@
 # The Hourglass
 
 > *Golden dunes stretch wide*
-> 
-> *Shadows braid through dusk*
+>
+> *Shadows braid through dusk's thin light*
 >
 > *Stars forget the dark*
 
@@ -100,4 +100,3 @@ The `sections/hourglass.liquid` file also contains a `{% schema %}` block.
 | `pnpm run dev` | Build HTML and start Vite dev server with live reload |
 | `pnpm run preview` | Preview the production build locally |
 | `pnpm run clean` | Remove `dist/` |
-
